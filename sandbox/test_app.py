@@ -1,5 +1,5 @@
 import pytest
-import app
+import app as app_module
 from app import app, tasks
 
 @pytest.fixture
@@ -7,7 +7,7 @@ def client():
     app.config['TESTING'] = True
     with app.test_client() as client:
         tasks.clear()
-        app.task_id_counter = 1
+        app_module.task_id_counter = 1
         yield client
 
 def test_get_tasks_empty(client):
