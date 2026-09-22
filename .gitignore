@@ -1,0 +1,21 @@
+# Virtual environments
+env_agentes/
+.venv/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Agent outputs & large tool dumps
+**/large_tool_results/
+recetas_web/node_modules/
+
+# OS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
